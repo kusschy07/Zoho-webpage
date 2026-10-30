@@ -90,8 +90,9 @@ button {
     background: #fff;
     color: var(--red);
     border: 1px solid var(--red);
-    padding: 10px 16px;
-    font-size: 20px;
+    padding: 8px 12px;
+    font-size: 17px;
+    border-radius: 5px;
 }
 
 .sign-up:hover {
