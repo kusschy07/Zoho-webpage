@@ -1,0 +1,274 @@
+:root {
+    --red: #e42527;
+    --red-dark: #d0021b;
+    --blue: #226db4;
+    --text: #000;
+    --text-muted: #444;
+    --bg: #f8f9fb;
+    --border: #e6e8ec;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Zoho Puvi", "Inter", "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 36px;
+    margin-left: 44px;
+}
+
+.nav a {
+    font-size: 20px;
+    color: #111;
+}
+
+.nav a::after {
+    content: "⌵";
+    font-size: 14px;
+    margin-left: 10px;
+    color: #777;
+}
+
+.nav a:hover {
+    color: var(--red);
+}
+
+.sL {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 20px;
+}
+
+.search {
+    background: none;
+    border: none;
+    font-size: 22px;
+}
+
+.sign-in {
+    color: var(--red);
+}
+
+.sign-up {
+    background: #fff;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 10px 16px;
+    font-size: 20px;
+}
+
+.sign-up:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: start;
+    gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 56px 40px 50px 100px;
+}
+
+.hero1 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.25;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    position: relative;
+}
+
+
+.hero1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 52px;
+    height: 2px;
+    background: var(--red);
+}
+
+.hero2 {
+    margin-top: 32px;
+    max-width: 620px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.btn {
+    margin-top: 32px;
+    background: var(--red-dark);
+    color: #fff;
+    border: none;
+    padding: 16px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #a80015;
+}
+
+
+.hero-right {
+    background: #fff;
+    border: 1px solid #f0f1f4;
+    padding: 0 40px 40px;
+    margin-top: 0;
+}
+
+.features {
+    text-align: center;
+    padding-top: 32px;
+    margin-bottom: 32px;
+}
+
+.features h4 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.features h4::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 2px;
+    background: var(--red);
+}
+
+.apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 28px;
+}
+
+.app {
+    padding-left: 56px;   
+    position: relative;
+}
+
+
+.app .icon,
+.app img {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+}
+
+.app h3 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.app p {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-muted);
+    max-width: 190px;
+}
+
+.right-btn {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.right-btn a {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.right-btn a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+    }
+
+    .hero1 {
+        font-size: 40px;
+    }
+
+    .hero2 {
+        font-size: 18px;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .apps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+        padding: 0 20px 30px;
+    }
+}
